@@ -132,5 +132,100 @@ table {
 }
 html,
 body {
-  height: 100%;
+  max-width: 100px;
+  max-height: 100vw;
+}
+/* <------------> */
+.flexcolcen {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+.debugborder {
+  border: black 1rem solid;
+}
+.roundedborder {
+  border: solid white 0.5rem;
+  border-radius: 1rem;
+}
+:root {
+  font-size: 62.5%;
+  display: flex;
+  flex-direction: row;
+  border: black 1rem solid;
+  max-width: 1000px;
+  background-color: #001f3f;
+  color: #001f3f;
+}
+.site {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  font-size: 1.6rem;
+  padding: 1.6rem 3.2rem;
+  max-width: 1000px;
+  background-color: #001f3f;
+  color: #001f3f;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: 3.2rem;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0.8rem 0rem;
+  border: solid white 0.5rem;
+  border-radius: 1rem;
+  background-color: white;
+}
+a {
+  text-decoration: none;
+  font-size: 2.4rem;
+  color: #001f3f;
+}
+.section1 {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.overview {
+  border: solid white 0.5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  justify-content: stretch;
+  background-color: white;
+}
+.image {
+  max-width: 100%;
+  height: auto;
+}
+.image img {
+  height: auto;
+  max-width: 20vw;
+  border: solid white 0.5rem;
+  border-width: 2rem;
+  border-radius: 1rem;
+}
+@media (max-width: 450px) {
+  .image {
+    display: none;
+  }
+}
+.div1 {
+  border: solid white 0.5rem;
+  border-radius: 1rem;
+  background-color: white;
+  margin: 3.2rem 0 0 0;
+}
+h1 {
+  font-size: 2.4rem;
 }
