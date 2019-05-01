@@ -54,6 +54,117 @@ table {
 }
 
 html, body {
-    height: 100%;
+
+max-width: 100px;
+max-height: 100vw;
 }
+
+/* <------------> */
+
+@maxtabletpx: 450px;
+@maxdesktoppx: 800px;
+@darkcolor: #001f3f;
+@lightcolor:white;
+.flexcolcen{
+	display: flex;
+	flex-direction: column;
+	max-width: 100%;
+}
+
+.debugborder{
+	border: black 1rem solid;
+}
+
+.roundedborder{
+	border: solid @lightcolor 0.5rem;
+	border-radius: 1rem;
+}
+
+:root{
+	font-size: 62.5%;
+	display: flex;
+	flex-direction: row;
+	.debugborder;
+	max-width: 1000px;
+	background-color: @darkcolor;
+	color: @darkcolor;
+}
+
+.site{
+	.flexcolcen;
+	font-size: 1.6rem;
+	padding: 1.6rem 3.2rem;
+	max-width: 1000px;
+	background-color:@darkcolor;
+	color: @darkcolor;
+}
+
+header{
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	margin-bottom: 3.2rem;
+}
+
+nav{
+	 display: flex;
+	 flex-direction: row;
+	 justify-content: space-around;
+	 padding: 0.8rem 0rem;
+	 .roundedborder;
+	 background-color: @lightcolor;
+	 
+}
+
+a{
+	text-decoration: none;
+	font-size: 2.4rem;
+	color: @darkcolor;
+}
+
+.section1{
+	.flexcolcen;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
+}
+
+.overview{
+	.roundedborder;
+	.flexcolcen;
+	justify-content: stretch;
+	background-color: @lightcolor;
+}
+
+.image{
+	max-width: 100%;
+	height: auto;
+
+	img{
+		height: auto;
+		max-width: 20vw;
+		.roundedborder;
+		border-width: 2rem;
+		border-radius: 1rem;
+	} 
+
+	@media (max-width: @maxtabletpx){
+		display: none;
+	}
+} 
+
+.div1{
+	.roundedborder;
+	background-color: @lightcolor;
+	margin: 3.2rem 0 0 0;
+}
+
+h1{
+	font-size: 2.4rem
+}
+
+
+
+
+
 
