@@ -54,21 +54,18 @@ table {
 }
 
 html, body {
-
-max-width: 100px;
-max-height: 100vw;
+ 
 }
 
 /* <------------> */
 
 @maxtabletpx: 450px;
-@maxdesktoppx: 800px;
+@maxdesktoppx: 700px;
 @darkcolor: #001f3f;
 @lightcolor:white;
 .flexcolcen{
 	display: flex;
 	flex-direction: column;
-	max-width: 100%;
 }
 
 .debugborder{
@@ -82,16 +79,15 @@ max-height: 100vw;
 
 :root{
 	font-size: 62.5%;
-	display: flex;
-	flex-direction: row;
-	.debugborder;
-	max-width: 1000px;
-	background-color: @darkcolor;
-	color: @darkcolor;
 }
 
 .site{
 	.flexcolcen;
+	/* .debugborder; */
+	max-width: 1000px;
+	margin: 0 auto;
+	background-color: @darkcolor;
+	color: @darkcolor;
 	font-size: 1.6rem;
 	padding: 1.6rem 3.2rem;
 	max-width: 1000px;
@@ -100,19 +96,22 @@ max-height: 100vw;
 }
 
 header{
-	display: flex;
-	flex-direction: column;
-	align-items: stretch;
+	.flexcolcen;
+	/* align-items: stretch; */
 	margin-bottom: 3.2rem;
 }
 
 nav{
-	 display: flex;
-	 flex-direction: row;
+	.flexcolcen;
+	 align-items: center;
 	 justify-content: space-around;
 	 padding: 0.8rem 0rem;
 	 .roundedborder;
 	 background-color: @lightcolor;
+
+	 @media (min-width: @maxdesktoppx){
+		flex-direction: row;
+	}
 	 
 }
 
@@ -124,19 +123,29 @@ a{
 
 .section1{
 	.flexcolcen;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: stretch;
+	
+	@media (min-width: @maxtabletpx){
+		flex-direction: row;
+	}
 }
 
 .overview{
 	.roundedborder;
 	.flexcolcen;
+	width: 100%;
 	justify-content: stretch;
 	background-color: @lightcolor;
+
+	@media (min-width: @maxtabletpx){
+		width:50%;
+	}
 }
 
 .image{
+	display: none;
 	max-width: 100%;
 	height: auto;
 
@@ -146,11 +155,14 @@ a{
 		.roundedborder;
 		border-width: 2rem;
 		border-radius: 1rem;
+
+		
 	} 
 
-	@media (max-width: @maxtabletpx){
-		display: none;
+	@media (min-width: @maxtabletpx){
+		display: block;
 	}
+	
 } 
 
 .div1{
@@ -162,6 +174,8 @@ a{
 h1{
 	font-size: 2.4rem
 }
+
+
 
 
 
